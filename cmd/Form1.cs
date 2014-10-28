@@ -379,6 +379,7 @@ namespace cmd
         {
             try
             {
+                labelControl3.Text = s.runed.ToString();
                 if (s.clients.Count != checkedListBoxControl1.Items.Count)
                 {
                     checkedListBoxControl1.Items.Clear();

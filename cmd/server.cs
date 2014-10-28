@@ -51,6 +51,18 @@ namespace cmd
             }
             catch (Exception) { }
         }
+
+
+        void command(string s)
+        {
+            switch (s)
+            {
+                case "file send": { MessageBox.Show("file send"); break; }
+                case "create repo": { MessageBox.Show("create repo"); break; }
+
+            }
+        }
+
         private void HandleClientComm(object client)
         {
             TcpClient tcpClient = (TcpClient)client;
@@ -94,7 +106,7 @@ namespace cmd
                 clientStream.Flush();
             }
 
-            // clientStream.Close();
+            clientStream.Close();
             tcpClient.Close();
             clients.Remove(s);
 
@@ -102,3 +114,5 @@ namespace cmd
 
     }
 }
+
+
