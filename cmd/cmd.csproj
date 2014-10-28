@@ -89,12 +89,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="createrepoform.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="createrepoform.Designer.cs">
-      <DependentUpon>createrepoform.cs</DependentUpon>
-    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,9 +106,6 @@
     <Compile Include="repo.cs" />
     <Compile Include="server.cs" />
     <Compile Include="settings.cs" />
-    <EmbeddedResource Include="createrepoform.resx">
-      <DependentUpon>createrepoform.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
