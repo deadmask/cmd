@@ -392,6 +392,14 @@ namespace cmd
             catch (Exception) { }
         }
 
+        private void xtraTabControl1_Click(object sender, EventArgs e)
+        {
+
+
+
+
+        }
+
 
       
 
