@@ -25,6 +25,7 @@ namespace cmd
         public Form1()
         {
             InitializeComponent();
+            s.frm = this;
         }
              
 
@@ -138,7 +139,7 @@ namespace cmd
             }
         }
 
-        void loadrepo()
+        public void loadrepo()
         {
                 for (int i = 0; i < repolist.Count;i++ )
                 {
@@ -185,7 +186,7 @@ namespace cmd
 
         }
 
-        void log(string s, string  p)
+       public void log(string s, string  p)
         {
             try
             {        
@@ -216,7 +217,7 @@ namespace cmd
         }
 
 
-        bool create_repo(string author,int fc)
+       public bool create_repo(string author,int fc)
         {
             try
             {

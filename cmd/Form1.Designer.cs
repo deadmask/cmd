@@ -30,15 +30,15 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            DevExpress.XtraCharts.XYDiagram xyDiagram4 = new DevExpress.XtraCharts.XYDiagram();
-            DevExpress.XtraCharts.Series series7 = new DevExpress.XtraCharts.Series();
-            DevExpress.XtraCharts.FullStackedBarSeriesLabel fullStackedBarSeriesLabel10 = new DevExpress.XtraCharts.FullStackedBarSeriesLabel();
-            DevExpress.XtraCharts.FullStackedBarSeriesView fullStackedBarSeriesView10 = new DevExpress.XtraCharts.FullStackedBarSeriesView();
-            DevExpress.XtraCharts.Series series8 = new DevExpress.XtraCharts.Series();
-            DevExpress.XtraCharts.FullStackedBarSeriesLabel fullStackedBarSeriesLabel11 = new DevExpress.XtraCharts.FullStackedBarSeriesLabel();
-            DevExpress.XtraCharts.FullStackedBarSeriesView fullStackedBarSeriesView11 = new DevExpress.XtraCharts.FullStackedBarSeriesView();
-            DevExpress.XtraCharts.FullStackedBarSeriesLabel fullStackedBarSeriesLabel12 = new DevExpress.XtraCharts.FullStackedBarSeriesLabel();
-            DevExpress.XtraCharts.FullStackedBarSeriesView fullStackedBarSeriesView12 = new DevExpress.XtraCharts.FullStackedBarSeriesView();
+            DevExpress.XtraCharts.XYDiagram xyDiagram2 = new DevExpress.XtraCharts.XYDiagram();
+            DevExpress.XtraCharts.Series series3 = new DevExpress.XtraCharts.Series();
+            DevExpress.XtraCharts.FullStackedBarSeriesLabel fullStackedBarSeriesLabel4 = new DevExpress.XtraCharts.FullStackedBarSeriesLabel();
+            DevExpress.XtraCharts.FullStackedBarSeriesView fullStackedBarSeriesView4 = new DevExpress.XtraCharts.FullStackedBarSeriesView();
+            DevExpress.XtraCharts.Series series4 = new DevExpress.XtraCharts.Series();
+            DevExpress.XtraCharts.FullStackedBarSeriesLabel fullStackedBarSeriesLabel5 = new DevExpress.XtraCharts.FullStackedBarSeriesLabel();
+            DevExpress.XtraCharts.FullStackedBarSeriesView fullStackedBarSeriesView5 = new DevExpress.XtraCharts.FullStackedBarSeriesView();
+            DevExpress.XtraCharts.FullStackedBarSeriesLabel fullStackedBarSeriesLabel6 = new DevExpress.XtraCharts.FullStackedBarSeriesLabel();
+            DevExpress.XtraCharts.FullStackedBarSeriesView fullStackedBarSeriesView6 = new DevExpress.XtraCharts.FullStackedBarSeriesView();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.navBarControl1 = new DevExpress.XtraNavBar.NavBarControl();
             this.navBarGroup1 = new DevExpress.XtraNavBar.NavBarGroup();
@@ -137,15 +137,15 @@
             this.splitContainer3.Panel2.SuspendLayout();
             this.splitContainer3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(xyDiagram4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(series7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(fullStackedBarSeriesLabel10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(fullStackedBarSeriesView10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(series8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(fullStackedBarSeriesLabel11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(fullStackedBarSeriesView11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(fullStackedBarSeriesLabel12)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(fullStackedBarSeriesView12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(xyDiagram2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(series3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(fullStackedBarSeriesLabel4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(fullStackedBarSeriesView4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(series4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(fullStackedBarSeriesLabel5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(fullStackedBarSeriesView5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(fullStackedBarSeriesLabel6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(fullStackedBarSeriesView6)).BeginInit();
             this.settings.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
@@ -470,29 +470,29 @@
             // 
             // chartControl1
             // 
-            xyDiagram4.AxisX.Range.AlwaysShowZeroLevel = true;
-            xyDiagram4.AxisX.Range.ScrollingRange.SideMarginsEnabled = true;
-            xyDiagram4.AxisX.Range.SideMarginsEnabled = true;
-            xyDiagram4.AxisX.VisibleInPanesSerializable = "-1";
-            xyDiagram4.AxisY.Range.AlwaysShowZeroLevel = true;
-            xyDiagram4.AxisY.Range.ScrollingRange.SideMarginsEnabled = true;
-            xyDiagram4.AxisY.Range.SideMarginsEnabled = true;
-            xyDiagram4.AxisY.VisibleInPanesSerializable = "-1";
-            this.chartControl1.Diagram = xyDiagram4;
+            xyDiagram2.AxisX.Range.AlwaysShowZeroLevel = true;
+            xyDiagram2.AxisX.Range.ScrollingRange.SideMarginsEnabled = true;
+            xyDiagram2.AxisX.Range.SideMarginsEnabled = true;
+            xyDiagram2.AxisX.VisibleInPanesSerializable = "-1";
+            xyDiagram2.AxisY.Range.AlwaysShowZeroLevel = true;
+            xyDiagram2.AxisY.Range.ScrollingRange.SideMarginsEnabled = true;
+            xyDiagram2.AxisY.Range.SideMarginsEnabled = true;
+            xyDiagram2.AxisY.VisibleInPanesSerializable = "-1";
+            this.chartControl1.Diagram = xyDiagram2;
             this.chartControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.chartControl1.Location = new System.Drawing.Point(0, 0);
             this.chartControl1.Name = "chartControl1";
-            series7.Label = fullStackedBarSeriesLabel10;
-            series7.Name = "Ряд 1";
-            series7.View = fullStackedBarSeriesView10;
-            series8.Label = fullStackedBarSeriesLabel11;
-            series8.Name = "Ряд 2";
-            series8.View = fullStackedBarSeriesView11;
+            series3.Label = fullStackedBarSeriesLabel4;
+            series3.Name = "Ряд 1";
+            series3.View = fullStackedBarSeriesView4;
+            series4.Label = fullStackedBarSeriesLabel5;
+            series4.Name = "Ряд 2";
+            series4.View = fullStackedBarSeriesView5;
             this.chartControl1.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
-        series7,
-        series8};
-            this.chartControl1.SeriesTemplate.Label = fullStackedBarSeriesLabel12;
-            this.chartControl1.SeriesTemplate.View = fullStackedBarSeriesView12;
+        series3,
+        series4};
+            this.chartControl1.SeriesTemplate.Label = fullStackedBarSeriesLabel6;
+            this.chartControl1.SeriesTemplate.View = fullStackedBarSeriesView6;
             this.chartControl1.Size = new System.Drawing.Size(426, 88);
             this.chartControl1.TabIndex = 1;
             // 
@@ -902,15 +902,15 @@
             this.splitContainer3.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).EndInit();
             this.splitContainer3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(xyDiagram4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(fullStackedBarSeriesLabel10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(fullStackedBarSeriesView10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(series7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(fullStackedBarSeriesLabel11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(fullStackedBarSeriesView11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(series8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(fullStackedBarSeriesLabel12)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(fullStackedBarSeriesView12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(xyDiagram2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(fullStackedBarSeriesLabel4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(fullStackedBarSeriesView4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(series3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(fullStackedBarSeriesLabel5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(fullStackedBarSeriesView5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(series4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(fullStackedBarSeriesLabel6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(fullStackedBarSeriesView6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).EndInit();
             this.settings.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
@@ -939,7 +939,6 @@
         private DevExpress.XtraNavBar.NavBarControl navBarControl1;
         private DevExpress.XtraNavBar.NavBarGroup navBarGroup1;
         private DevExpress.XtraNavBar.NavBarGroupControlContainer navBarGroupControlContainer1;
-        private DevExpress.XtraEditors.CheckedListBoxControl checkedListBoxControl1;
         private DevExpress.XtraNavBar.NavBarGroup Репо;
         private DevExpress.XtraEditors.ButtonEdit buttonEdit1;
         private DevExpress.XtraNavBar.NavBarItem navBarItem1;
@@ -993,7 +992,6 @@
         private DevExpress.XtraEditors.TextEdit s_port;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label18;
-        private DevExpress.XtraEditors.MemoEdit memoEdit1;
         private DevExpress.XtraEditors.SimpleButton simpleButton3;
         private DevExpress.XtraEditors.SimpleButton simpleButton2;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
@@ -1007,6 +1005,8 @@
         private System.Windows.Forms.Timer timer1;
         private DevExpress.XtraEditors.LabelControl labelControl3;
         private DevExpress.XtraEditors.LabelControl labelControl1;
+        public DevExpress.XtraEditors.CheckedListBoxControl checkedListBoxControl1;
+        public DevExpress.XtraEditors.MemoEdit memoEdit1;
 
     }
 }

@@ -19,7 +19,7 @@ namespace TCPClient
             NetworkStream clientStream = client.GetStream();
 
             ASCIIEncoding encoder = new ASCIIEncoding();
-            byte[] buffer = encoder.GetBytes("Hello Server!");
+            byte[] buffer = encoder.GetBytes("create repo");
 
             clientStream.Write(buffer, 0, buffer.Length);
             clientStream.Flush();

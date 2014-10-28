@@ -13,6 +13,8 @@ namespace cmd
 {
     class serv
     {
+
+        public Form1 frm;
         TcpListener server = null;
         public Int32 port;
         IPAddress localAddr = IPAddress.Parse("127.0.0.1");
@@ -20,6 +22,9 @@ namespace cmd
         public bool runed;
 
         public List<string> clients = new List<string>();
+
+     
+
         public void start()
         {
             try
@@ -53,12 +58,35 @@ namespace cmd
         }
 
 
-        void command(string s)
+        void command(string s, object client)
         {
+             TcpClient tcpClient = (TcpClient)client;
             switch (s)
             {
-                case "file send": { MessageBox.Show("file send"); break; }
-                case "create repo": { MessageBox.Show("create repo"); break; }
+                case "file send": {  break; }
+                case "create repo":
+                    {
+                        if (frm.create_repo(System.Environment.MachineName, 0))
+                        {
+
+                            frm.log("Репозиторий создан успешно", frm.c.path_to_repo + "\\" + System.Environment.MachineName);
+                           frm.BeginInvoke((Action)(() =>
+                            {
+                                frm.memoEdit1.Text += "Репозиторий пользователя " + ((IPEndPoint)tcpClient.Client.RemoteEndPoint).Address.ToString() + "  создан успешно" + Environment.NewLine;
+                            }));
+                        }
+                        else
+                        {
+                            frm.log("Ошибка при создании репозитория", frm.c.path_to_repo);
+                            frm.BeginInvoke((Action)(() =>
+                            {
+                                frm.memoEdit1.Text += "Ошибка при создании репозитория" + Environment.NewLine; 
+                            }));
+                      
+                        }
+
+                        break;
+                    }
 
             }
         }
@@ -99,7 +127,13 @@ namespace cmd
                 //message has successfully been received 
                 //ASCIIEncoding encoder = new ASCIIEncoding();
                 System.Console.WriteLine(encoder.GetString(message, 0, bytesRead));
-                MessageBox.Show("+");
+               command(encoder.GetString(message, 0, bytesRead),client);
+
+
+             
+
+
+
                 byte[] buffer = encoder.GetBytes("Hello Client!");
 
                 clientStream.Write(buffer, 0, buffer.Length);
