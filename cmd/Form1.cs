@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -242,11 +243,16 @@ namespace cmd
 
                 XMLFile<repo> file = new XMLFile<repo>(c.path_to_repo + "\\" + r.name + "\\info");
                 file.Save(r);
+               
 
                 if (repolist.Contains(r.name)) 
                 {
-                    log("Репозиторий для вашего ПК был создан ранее", c.path_to_repo); 
-                    memoEdit1.Text = memoEdit1.Text + "Репозиторий для  ПК с именем\" " + r.name + "\" был создан ранее" + Environment.NewLine; 
+                    log("Репозиторий для вашего ПК был создан ранее", c.path_to_repo);
+                    this.BeginInvoke((Action)(() =>
+                      {
+                          memoEdit1.Text = memoEdit1.Text + "Репозиторий для  ПК с именем\" " + r.name + "\" был создан ранее" + Environment.NewLine;
+
+                      }));
                     return false; 
                 }
                 else
@@ -254,12 +260,18 @@ namespace cmd
                     repolist.Add(r.name);
                     XMLFile<List<string>> list = new XMLFile<List<string>>(c.path_to_repo + "\\lst");
                     list.Save(repolist);
-                    listView1.Items.Clear();
-                    loadrepo();
+                   
+                    this.BeginInvoke((Action)(() =>
+                    {
+                        listView1.Items.Clear();
+                      loadrepo();  
+                    }));
+                      
+                   
                 }
-                return true;
+            return true;
             }
-            catch (Exception) { return false; }
+            catch (Exception ex) {   MessageBox.Show(ex.Message);   return false; }
         }
 
          private void listView1_ItemSelectionChanged(object sender, ListViewItemSelectionChangedEventArgs e)
@@ -276,6 +288,10 @@ namespace cmd
 
         private void navBarItem2_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
+            delrepo();
+        }
+        void delrepo ()
+        {
             try
             {
                 string text = listView1.SelectedItems[0].Text;
@@ -287,14 +303,14 @@ namespace cmd
                 log("Репозиторий " + text + " Удален администратором", c.path_to_repo);
                 memoEdit1.Text = memoEdit1.Text + "Репозиторий " + text + " Удален администратором" + Environment.NewLine;
 
-                if (!Directory.Exists(c.path_to_repo + "\\deleted\\"+text)) 
-                { 
-                    Directory.CreateDirectory(c.path_to_repo + "\\deleted\\" );                  
-                    Directory.Move(c.path_to_repo + "\\" + text, c.path_to_repo + "\\deleted\\"+text);
+                if (!Directory.Exists(c.path_to_repo + "\\deleted\\" + text))
+                {
+                    Directory.CreateDirectory(c.path_to_repo + "\\deleted\\");
+                    Directory.Move(c.path_to_repo + "\\" + text, c.path_to_repo + "\\deleted\\" + text);
                 }
                 else
-                {                  
-                    Directory.Delete(c.path_to_repo + "\\deleted\\"+text,true);
+                {
+                    Directory.Delete(c.path_to_repo + "\\deleted\\" + text, true);
                     Directory.Move(c.path_to_repo + "\\" + text, c.path_to_repo + "\\deleted\\" + text);
                 }
 
@@ -302,40 +318,43 @@ namespace cmd
             }
             catch (Exception ex) { MessageBox.Show(ex.Message); }
         }
-
         private void EditRepoBtn_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
+            get_repo_info();
+        }
+        void get_repo_info()
+        {
             try
-            {    
+            {
                 string text = listView1.SelectedItems[0].Text;
                 repo r = new repo();
                 XMLFile<repo> file = new XMLFile<repo>(c.path_to_repo + "\\" + text + "\\info");
                 r = file.Load();
                 memoEdit1.Text += "----------------------------------REPO INFO----------------------------" + Environment.NewLine;
-                memoEdit1.Text += "Автор :"+r.author + Environment.NewLine;
-                memoEdit1.Text += "Дата создания :" +r.date_creation + Environment.NewLine;
-                memoEdit1.Text += "Количество файлов :"+r.filecount + Environment.NewLine;
+                memoEdit1.Text += "Автор :" + r.author + Environment.NewLine;
+                memoEdit1.Text += "Дата создания :" + r.date_creation + Environment.NewLine;
+                memoEdit1.Text += "Количество файлов :" + r.filecount + Environment.NewLine;
                 memoEdit1.Text += "Ревизия :" + r.rev + Environment.NewLine;
                 memoEdit1.Text += "Последнее обновление :" + r.updated + Environment.NewLine;
-                memoEdit1.Text += "Пользователи :" +  Environment.NewLine;
-                foreach(var v in r.user_list)
+                memoEdit1.Text += "Пользователи :" + Environment.NewLine;
+                foreach (var v in r.user_list)
                 {
                     memoEdit1.Text += v + Environment.NewLine;
                 }
-                memoEdit1.Text += "----------------------------------------------------------------------------"  + Environment.NewLine;           
-                
+                memoEdit1.Text += "----------------------------------------------------------------------------" + Environment.NewLine;
+
                 xtraTabControl1.SelectedTabPage = xtraTabPage1;
 
                 log("----------------------------------REPO INFO----------------------------", c.path_to_repo);
-                log("Автор :"+r.author, c.path_to_repo);
+                log("Автор :" + r.author, c.path_to_repo);
                 log("Дата создания :" + r.date_creation, c.path_to_repo);
                 log("Количество файлов :" + r.filecount, c.path_to_repo);
                 log("Ревизия :" + r.rev, c.path_to_repo);
                 log("Последнее обновление :" + r.updated, c.path_to_repo);
                 log("Пользователи :" + r.user_list, c.path_to_repo);
-                log("----------------------------------------------------------------------------", c.path_to_repo); 
+                log("----------------------------------------------------------------------------", c.path_to_repo);
 
-            
+
             }
             catch (Exception ex) { MessageBox.Show(ex.Message); }
         }
@@ -400,6 +419,35 @@ namespace cmd
 
 
 
+        }
+
+        private void listView1_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+            {
+                if (listView1.FocusedItem.Bounds.Contains(e.Location) == true)
+                {
+                    repobrowsermenu.Show(Cursor.Position);
+                }
+            } 
+        }
+
+        private void toolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+            delrepo();
+        }
+
+        private void информацияToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            get_repo_info();
+        }
+
+        private void открытьДиректориюВПроводникеToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (Directory.Exists(c.path_to_repo + "\\" + listView1.SelectedItems[0].Text))
+            { 
+                Process.Start(c.path_to_repo + "\\" + listView1.SelectedItems[0].Text); 
+            }
         }
 
 

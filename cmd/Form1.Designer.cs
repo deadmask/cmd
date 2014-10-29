@@ -28,23 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            DevExpress.XtraCharts.XYDiagram xyDiagram2 = new DevExpress.XtraCharts.XYDiagram();
-            DevExpress.XtraCharts.Series series3 = new DevExpress.XtraCharts.Series();
-            DevExpress.XtraCharts.FullStackedBarSeriesLabel fullStackedBarSeriesLabel4 = new DevExpress.XtraCharts.FullStackedBarSeriesLabel();
-            DevExpress.XtraCharts.FullStackedBarSeriesView fullStackedBarSeriesView4 = new DevExpress.XtraCharts.FullStackedBarSeriesView();
-            DevExpress.XtraCharts.Series series4 = new DevExpress.XtraCharts.Series();
-            DevExpress.XtraCharts.FullStackedBarSeriesLabel fullStackedBarSeriesLabel5 = new DevExpress.XtraCharts.FullStackedBarSeriesLabel();
-            DevExpress.XtraCharts.FullStackedBarSeriesView fullStackedBarSeriesView5 = new DevExpress.XtraCharts.FullStackedBarSeriesView();
-            DevExpress.XtraCharts.FullStackedBarSeriesLabel fullStackedBarSeriesLabel6 = new DevExpress.XtraCharts.FullStackedBarSeriesLabel();
-            DevExpress.XtraCharts.FullStackedBarSeriesView fullStackedBarSeriesView6 = new DevExpress.XtraCharts.FullStackedBarSeriesView();
+            DevExpress.XtraCharts.XYDiagram xyDiagram8 = new DevExpress.XtraCharts.XYDiagram();
+            DevExpress.XtraCharts.Series series15 = new DevExpress.XtraCharts.Series();
+            DevExpress.XtraCharts.FullStackedBarSeriesLabel fullStackedBarSeriesLabel22 = new DevExpress.XtraCharts.FullStackedBarSeriesLabel();
+            DevExpress.XtraCharts.FullStackedBarSeriesView fullStackedBarSeriesView22 = new DevExpress.XtraCharts.FullStackedBarSeriesView();
+            DevExpress.XtraCharts.Series series16 = new DevExpress.XtraCharts.Series();
+            DevExpress.XtraCharts.FullStackedBarSeriesLabel fullStackedBarSeriesLabel23 = new DevExpress.XtraCharts.FullStackedBarSeriesLabel();
+            DevExpress.XtraCharts.FullStackedBarSeriesView fullStackedBarSeriesView23 = new DevExpress.XtraCharts.FullStackedBarSeriesView();
+            DevExpress.XtraCharts.FullStackedBarSeriesLabel fullStackedBarSeriesLabel24 = new DevExpress.XtraCharts.FullStackedBarSeriesLabel();
+            DevExpress.XtraCharts.FullStackedBarSeriesView fullStackedBarSeriesView24 = new DevExpress.XtraCharts.FullStackedBarSeriesView();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.navBarControl1 = new DevExpress.XtraNavBar.NavBarControl();
             this.navBarGroup1 = new DevExpress.XtraNavBar.NavBarGroup();
             this.navBarGroupControlContainer1 = new DevExpress.XtraNavBar.NavBarGroupControlContainer();
             this.checkedListBoxControl1 = new DevExpress.XtraEditors.CheckedListBoxControl();
             this.navBarGroupControlContainer2 = new DevExpress.XtraNavBar.NavBarGroupControlContainer();
+            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.Репо = new DevExpress.XtraNavBar.NavBarGroup();
             this.navBarItem1 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem2 = new DevExpress.XtraNavBar.NavBarItem();
@@ -66,7 +67,7 @@
             this.repobrowser = new DevExpress.XtraTab.XtraTabPage();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.listView1 = new System.Windows.Forms.ListView();
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.imageList1 = new System.Windows.Forms.ImageList();
             this.splitContainer3 = new System.Windows.Forms.SplitContainer();
             this.chartControl1 = new DevExpress.XtraCharts.ChartControl();
             this.label10 = new System.Windows.Forms.Label();
@@ -102,15 +103,18 @@
             this.s_port = new DevExpress.XtraEditors.TextEdit();
             this.label19 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
-            this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
-            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel();
+            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.вЫходИзПриложенияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
+            this.timer1 = new System.Windows.Forms.Timer();
+            this.repobrowsermenu = new System.Windows.Forms.ContextMenuStrip();
+            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.открытьДиректориюВПроводникеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.открытьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.информацияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -137,15 +141,15 @@
             this.splitContainer3.Panel2.SuspendLayout();
             this.splitContainer3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(xyDiagram2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(series3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(fullStackedBarSeriesLabel4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(fullStackedBarSeriesView4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(series4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(fullStackedBarSeriesLabel5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(fullStackedBarSeriesView5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(fullStackedBarSeriesLabel6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(fullStackedBarSeriesView6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(xyDiagram8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(series15)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(fullStackedBarSeriesLabel22)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(fullStackedBarSeriesView22)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(series16)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(fullStackedBarSeriesLabel23)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(fullStackedBarSeriesView23)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(fullStackedBarSeriesLabel24)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(fullStackedBarSeriesView24)).BeginInit();
             this.settings.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
@@ -161,6 +165,7 @@
             this.groupControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.s_port.Properties)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
+            this.repobrowsermenu.SuspendLayout();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -238,6 +243,24 @@
             this.navBarGroupControlContainer2.Name = "navBarGroupControlContainer2";
             this.navBarGroupControlContainer2.Size = new System.Drawing.Size(190, 73);
             this.navBarGroupControlContainer2.TabIndex = 1;
+            // 
+            // labelControl3
+            // 
+            this.labelControl3.Appearance.ForeColor = System.Drawing.Color.White;
+            this.labelControl3.Location = new System.Drawing.Point(69, 15);
+            this.labelControl3.Name = "labelControl3";
+            this.labelControl3.Size = new System.Drawing.Size(34, 13);
+            this.labelControl3.TabIndex = 2;
+            this.labelControl3.Text = "{NULL}";
+            // 
+            // labelControl1
+            // 
+            this.labelControl1.Appearance.ForeColor = System.Drawing.Color.White;
+            this.labelControl1.Location = new System.Drawing.Point(8, 15);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(44, 13);
+            this.labelControl1.TabIndex = 0;
+            this.labelControl1.Text = "Сервер :";
             // 
             // Репо
             // 
@@ -435,6 +458,7 @@
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.ItemSelectionChanged += new System.Windows.Forms.ListViewItemSelectionChangedEventHandler(this.listView1_ItemSelectionChanged);
+            this.listView1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.listView1_MouseDown);
             // 
             // imageList1
             // 
@@ -470,29 +494,29 @@
             // 
             // chartControl1
             // 
-            xyDiagram2.AxisX.Range.AlwaysShowZeroLevel = true;
-            xyDiagram2.AxisX.Range.ScrollingRange.SideMarginsEnabled = true;
-            xyDiagram2.AxisX.Range.SideMarginsEnabled = true;
-            xyDiagram2.AxisX.VisibleInPanesSerializable = "-1";
-            xyDiagram2.AxisY.Range.AlwaysShowZeroLevel = true;
-            xyDiagram2.AxisY.Range.ScrollingRange.SideMarginsEnabled = true;
-            xyDiagram2.AxisY.Range.SideMarginsEnabled = true;
-            xyDiagram2.AxisY.VisibleInPanesSerializable = "-1";
-            this.chartControl1.Diagram = xyDiagram2;
+            xyDiagram8.AxisX.Range.AlwaysShowZeroLevel = true;
+            xyDiagram8.AxisX.Range.ScrollingRange.SideMarginsEnabled = true;
+            xyDiagram8.AxisX.Range.SideMarginsEnabled = true;
+            xyDiagram8.AxisX.VisibleInPanesSerializable = "-1";
+            xyDiagram8.AxisY.Range.AlwaysShowZeroLevel = true;
+            xyDiagram8.AxisY.Range.ScrollingRange.SideMarginsEnabled = true;
+            xyDiagram8.AxisY.Range.SideMarginsEnabled = true;
+            xyDiagram8.AxisY.VisibleInPanesSerializable = "-1";
+            this.chartControl1.Diagram = xyDiagram8;
             this.chartControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.chartControl1.Location = new System.Drawing.Point(0, 0);
             this.chartControl1.Name = "chartControl1";
-            series3.Label = fullStackedBarSeriesLabel4;
-            series3.Name = "Ряд 1";
-            series3.View = fullStackedBarSeriesView4;
-            series4.Label = fullStackedBarSeriesLabel5;
-            series4.Name = "Ряд 2";
-            series4.View = fullStackedBarSeriesView5;
+            series15.Label = fullStackedBarSeriesLabel22;
+            series15.Name = "Ряд 1";
+            series15.View = fullStackedBarSeriesView22;
+            series16.Label = fullStackedBarSeriesLabel23;
+            series16.Name = "Ряд 2";
+            series16.View = fullStackedBarSeriesView23;
             this.chartControl1.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
-        series3,
-        series4};
-            this.chartControl1.SeriesTemplate.Label = fullStackedBarSeriesLabel6;
-            this.chartControl1.SeriesTemplate.View = fullStackedBarSeriesView6;
+        series15,
+        series16};
+            this.chartControl1.SeriesTemplate.Label = fullStackedBarSeriesLabel24;
+            this.chartControl1.SeriesTemplate.View = fullStackedBarSeriesView24;
             this.chartControl1.Size = new System.Drawing.Size(426, 88);
             this.chartControl1.TabIndex = 1;
             // 
@@ -845,23 +869,42 @@
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // labelControl1
+            // repobrowsermenu
             // 
-            this.labelControl1.Appearance.ForeColor = System.Drawing.Color.White;
-            this.labelControl1.Location = new System.Drawing.Point(8, 15);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(44, 13);
-            this.labelControl1.TabIndex = 0;
-            this.labelControl1.Text = "Сервер :";
+            this.repobrowsermenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem3,
+            this.открытьДиректориюВПроводникеToolStripMenuItem,
+            this.открытьToolStripMenuItem,
+            this.информацияToolStripMenuItem});
+            this.repobrowsermenu.Name = "repobrowsermenu";
+            this.repobrowsermenu.Size = new System.Drawing.Size(271, 114);
             // 
-            // labelControl3
+            // toolStripMenuItem3
             // 
-            this.labelControl3.Appearance.ForeColor = System.Drawing.Color.White;
-            this.labelControl3.Location = new System.Drawing.Point(69, 15);
-            this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(34, 13);
-            this.labelControl3.TabIndex = 2;
-            this.labelControl3.Text = "{NULL}";
+            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(270, 22);
+            this.toolStripMenuItem3.Text = "Удалить";
+            this.toolStripMenuItem3.Click += new System.EventHandler(this.toolStripMenuItem3_Click);
+            // 
+            // открытьДиректориюВПроводникеToolStripMenuItem
+            // 
+            this.открытьДиректориюВПроводникеToolStripMenuItem.Name = "открытьДиректориюВПроводникеToolStripMenuItem";
+            this.открытьДиректориюВПроводникеToolStripMenuItem.Size = new System.Drawing.Size(270, 22);
+            this.открытьДиректориюВПроводникеToolStripMenuItem.Text = "Открыть директорию в проводнике";
+            this.открытьДиректориюВПроводникеToolStripMenuItem.Click += new System.EventHandler(this.открытьДиректориюВПроводникеToolStripMenuItem_Click);
+            // 
+            // открытьToolStripMenuItem
+            // 
+            this.открытьToolStripMenuItem.Name = "открытьToolStripMenuItem";
+            this.открытьToolStripMenuItem.Size = new System.Drawing.Size(270, 22);
+            this.открытьToolStripMenuItem.Text = "Открыть";
+            // 
+            // информацияToolStripMenuItem
+            // 
+            this.информацияToolStripMenuItem.Name = "информацияToolStripMenuItem";
+            this.информацияToolStripMenuItem.Size = new System.Drawing.Size(270, 22);
+            this.информацияToolStripMenuItem.Text = "Информация";
+            this.информацияToolStripMenuItem.Click += new System.EventHandler(this.информацияToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -902,15 +945,15 @@
             this.splitContainer3.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).EndInit();
             this.splitContainer3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(xyDiagram2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(fullStackedBarSeriesLabel4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(fullStackedBarSeriesView4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(series3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(fullStackedBarSeriesLabel5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(fullStackedBarSeriesView5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(series4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(fullStackedBarSeriesLabel6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(fullStackedBarSeriesView6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(xyDiagram8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(fullStackedBarSeriesLabel22)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(fullStackedBarSeriesView22)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(series15)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(fullStackedBarSeriesLabel23)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(fullStackedBarSeriesView23)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(series16)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(fullStackedBarSeriesLabel24)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(fullStackedBarSeriesView24)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).EndInit();
             this.settings.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
@@ -929,6 +972,7 @@
             this.groupControl2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.s_port.Properties)).EndInit();
             this.contextMenuStrip1.ResumeLayout(false);
+            this.repobrowsermenu.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1007,6 +1051,11 @@
         private DevExpress.XtraEditors.LabelControl labelControl1;
         public DevExpress.XtraEditors.CheckedListBoxControl checkedListBoxControl1;
         public DevExpress.XtraEditors.MemoEdit memoEdit1;
+        private System.Windows.Forms.ContextMenuStrip repobrowsermenu;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
+        private System.Windows.Forms.ToolStripMenuItem открытьДиректориюВПроводникеToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem открытьToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem информацияToolStripMenuItem;
 
     }
 }

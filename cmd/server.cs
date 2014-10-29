@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.Sockets;
@@ -58,37 +59,36 @@ namespace cmd
         }
 
 
-        void command(string s, object client)
+        void command(string s, object client, byte[] b)
         {
-             TcpClient tcpClient = (TcpClient)client;
-            switch (s)
+           string [] str = s.Split('|');
+            try
             {
-                case "file send": {  break; }
-                case "create repo":
-                    {
-                        if (frm.create_repo(System.Environment.MachineName, 0))
+                TcpClient tcpClient = (TcpClient)client;
+                switch (str[0])
+                {
+                    case "create repo":
                         {
-
-                            frm.log("Репозиторий создан успешно", frm.c.path_to_repo + "\\" + System.Environment.MachineName);
-                           frm.BeginInvoke((Action)(() =>
+                            if (frm.create_repo(System.Environment.MachineName, 0))
                             {
-                                frm.memoEdit1.Text += "Репозиторий пользователя " + ((IPEndPoint)tcpClient.Client.RemoteEndPoint).Address.ToString() + "  создан успешно" + Environment.NewLine;
-                            }));
+                                frm.log("Репозиторий создан успешно", frm.c.path_to_repo + "\\" + System.Environment.MachineName);
+                                frm.BeginInvoke((Action)(() =>
+                                {
+                                    frm.memoEdit1.Text += "Репозиторий пользователя " + ((IPEndPoint)tcpClient.Client.RemoteEndPoint).Address.ToString() + "  создан успешно" + Environment.NewLine;
+                                }));
+                            }
+                            break;
                         }
-                        else
+                    case "send to repo":
                         {
-                            frm.log("Ошибка при создании репозитория", frm.c.path_to_repo);
-                            frm.BeginInvoke((Action)(() =>
-                            {
-                                frm.memoEdit1.Text += "Ошибка при создании репозитория" + Environment.NewLine; 
-                            }));
-                      
+                            MessageBox.Show(str[0]);
+                            File.WriteAllBytes(@"C:\репо\HOME\Data\" + str[1], b );                           
+                            break;
                         }
-
-                        break;
-                    }
-
+                        
+                }
             }
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
         }
 
         private void HandleClientComm(object client)
@@ -96,50 +96,28 @@ namespace cmd
             TcpClient tcpClient = (TcpClient)client;
             string s = ((IPEndPoint)tcpClient.Client.RemoteEndPoint).Address.ToString();
             clients.Add(s);
-
             NetworkStream clientStream = tcpClient.GetStream();
-
             byte[] message = new byte[4096];
+          
             int bytesRead;
-            ASCIIEncoding encoder = new ASCIIEncoding();
+            ASCIIEncoding encoder = new ASCIIEncoding();   
             while (true)
             {
                 bytesRead = 0;
-
                 try
                 {
-                    //blocks until a client sends a message 
                     bytesRead = clientStream.Read(message, 0, 4096);
                 }
                 catch
                 {
-                    //a socket error has occured 
                     break;
                 }
-
                 if (bytesRead == 0)
                 {
-
-                    //the client has disconnected from the server 
                     break;
-                }
-
-                //message has successfully been received 
-                //ASCIIEncoding encoder = new ASCIIEncoding();
-                System.Console.WriteLine(encoder.GetString(message, 0, bytesRead));
-               command(encoder.GetString(message, 0, bytesRead),client);
-
-
-             
-
-
-
-                byte[] buffer = encoder.GetBytes("Hello Client!");
-
-                clientStream.Write(buffer, 0, buffer.Length);
-                clientStream.Flush();
+                }                    
+            //   command(System.Text.ASCIIEncoding.Default.GetString(message2), client,message2);
             }
-
             clientStream.Close();
             tcpClient.Close();
             clients.Remove(s);
