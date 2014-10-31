@@ -18,18 +18,20 @@ namespace DXApplication1
         {
             InitializeComponent();
         }
-
+        List<TcpClient> c = new List<TcpClient>();
         private void button1_Click(object sender, EventArgs e)
         {
             TcpClient client = new TcpClient();
+            c.Add(client);
             IPEndPoint serverEndPoint = new IPEndPoint(IPAddress.Parse("127.0.0.1"), 3333);
             client.Connect(serverEndPoint);
             NetworkStream clientStream = client.GetStream();
             ASCIIEncoding encoder = new ASCIIEncoding();
-            byte[] buffer = encoder.GetBytes("create repo");
+            byte[] buffer = encoder.GetBytes("create repo|"+System.Environment.MachineName);
             clientStream.Write(buffer, 0, buffer.Length);
             clientStream.Flush();
         //    client.Close();
+           
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -40,6 +42,7 @@ namespace DXApplication1
            {              
              FileInfo fi = new FileInfo(v);
              TcpClient client = new TcpClient();
+             c.Add(client);
              IPEndPoint serverEndPoint = new IPEndPoint(IPAddress.Parse("127.0.0.1"), 3333);
              client.Connect(serverEndPoint);
              NetworkStream clientStream = client.GetStream();
@@ -52,11 +55,21 @@ namespace DXApplication1
              clientStream.Write(buffer, 0, buffer.Length);
              clientStream.Flush();
 
-             client.Close();
+            // client.Close();
 
           //  client.Client.SendFile();
            }
            
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {           
+             
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+          
         }
     }
 }

@@ -28,21 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            DevExpress.XtraCharts.XYDiagram xyDiagram8 = new DevExpress.XtraCharts.XYDiagram();
-            DevExpress.XtraCharts.Series series15 = new DevExpress.XtraCharts.Series();
-            DevExpress.XtraCharts.FullStackedBarSeriesLabel fullStackedBarSeriesLabel22 = new DevExpress.XtraCharts.FullStackedBarSeriesLabel();
-            DevExpress.XtraCharts.FullStackedBarSeriesView fullStackedBarSeriesView22 = new DevExpress.XtraCharts.FullStackedBarSeriesView();
-            DevExpress.XtraCharts.Series series16 = new DevExpress.XtraCharts.Series();
-            DevExpress.XtraCharts.FullStackedBarSeriesLabel fullStackedBarSeriesLabel23 = new DevExpress.XtraCharts.FullStackedBarSeriesLabel();
-            DevExpress.XtraCharts.FullStackedBarSeriesView fullStackedBarSeriesView23 = new DevExpress.XtraCharts.FullStackedBarSeriesView();
-            DevExpress.XtraCharts.FullStackedBarSeriesLabel fullStackedBarSeriesLabel24 = new DevExpress.XtraCharts.FullStackedBarSeriesLabel();
-            DevExpress.XtraCharts.FullStackedBarSeriesView fullStackedBarSeriesView24 = new DevExpress.XtraCharts.FullStackedBarSeriesView();
+            DevExpress.XtraCharts.XYDiagram xyDiagram1 = new DevExpress.XtraCharts.XYDiagram();
+            DevExpress.XtraCharts.Series series1 = new DevExpress.XtraCharts.Series();
+            DevExpress.XtraCharts.FullStackedBarSeriesLabel fullStackedBarSeriesLabel1 = new DevExpress.XtraCharts.FullStackedBarSeriesLabel();
+            DevExpress.XtraCharts.FullStackedBarSeriesView fullStackedBarSeriesView1 = new DevExpress.XtraCharts.FullStackedBarSeriesView();
+            DevExpress.XtraCharts.Series series2 = new DevExpress.XtraCharts.Series();
+            DevExpress.XtraCharts.FullStackedBarSeriesLabel fullStackedBarSeriesLabel2 = new DevExpress.XtraCharts.FullStackedBarSeriesLabel();
+            DevExpress.XtraCharts.FullStackedBarSeriesView fullStackedBarSeriesView2 = new DevExpress.XtraCharts.FullStackedBarSeriesView();
+            DevExpress.XtraCharts.FullStackedBarSeriesLabel fullStackedBarSeriesLabel3 = new DevExpress.XtraCharts.FullStackedBarSeriesLabel();
+            DevExpress.XtraCharts.FullStackedBarSeriesView fullStackedBarSeriesView3 = new DevExpress.XtraCharts.FullStackedBarSeriesView();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.navBarControl1 = new DevExpress.XtraNavBar.NavBarControl();
             this.navBarGroup1 = new DevExpress.XtraNavBar.NavBarGroup();
             this.navBarGroupControlContainer1 = new DevExpress.XtraNavBar.NavBarGroupControlContainer();
             this.checkedListBoxControl1 = new DevExpress.XtraEditors.CheckedListBoxControl();
+            this.con_client = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.navBarGroupControlContainer2 = new DevExpress.XtraNavBar.NavBarGroupControlContainer();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
@@ -67,7 +69,7 @@
             this.repobrowser = new DevExpress.XtraTab.XtraTabPage();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.listView1 = new System.Windows.Forms.ListView();
-            this.imageList1 = new System.Windows.Forms.ImageList();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.splitContainer3 = new System.Windows.Forms.SplitContainer();
             this.chartControl1 = new DevExpress.XtraCharts.ChartControl();
             this.label10 = new System.Windows.Forms.Label();
@@ -103,18 +105,19 @@
             this.s_port = new DevExpress.XtraEditors.TextEdit();
             this.label19 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
-            this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel();
-            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip();
+            this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
+            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.вЫходИзПриложенияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
-            this.timer1 = new System.Windows.Forms.Timer();
-            this.repobrowsermenu = new System.Windows.Forms.ContextMenuStrip();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.repobrowsermenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.открытьДиректориюВПроводникеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.открытьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.информацияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.отключитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -123,6 +126,7 @@
             this.navBarControl1.SuspendLayout();
             this.navBarGroupControlContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.checkedListBoxControl1)).BeginInit();
+            this.con_client.SuspendLayout();
             this.navBarGroupControlContainer2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
@@ -141,15 +145,15 @@
             this.splitContainer3.Panel2.SuspendLayout();
             this.splitContainer3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(xyDiagram8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(series15)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(fullStackedBarSeriesLabel22)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(fullStackedBarSeriesView22)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(series16)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(fullStackedBarSeriesLabel23)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(fullStackedBarSeriesView23)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(fullStackedBarSeriesLabel24)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(fullStackedBarSeriesView24)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(series1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(fullStackedBarSeriesLabel1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(fullStackedBarSeriesView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(series2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(fullStackedBarSeriesLabel2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(fullStackedBarSeriesView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(fullStackedBarSeriesLabel3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(fullStackedBarSeriesView3)).BeginInit();
             this.settings.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
@@ -230,11 +234,19 @@
             // 
             // checkedListBoxControl1
             // 
+            this.checkedListBoxControl1.ContextMenuStrip = this.con_client;
             this.checkedListBoxControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.checkedListBoxControl1.Location = new System.Drawing.Point(0, 0);
             this.checkedListBoxControl1.Name = "checkedListBoxControl1";
             this.checkedListBoxControl1.Size = new System.Drawing.Size(190, 73);
             this.checkedListBoxControl1.TabIndex = 1;
+            // 
+            // con_client
+            // 
+            this.con_client.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.отключитьToolStripMenuItem});
+            this.con_client.Name = "con_client";
+            this.con_client.Size = new System.Drawing.Size(153, 48);
             // 
             // navBarGroupControlContainer2
             // 
@@ -494,29 +506,29 @@
             // 
             // chartControl1
             // 
-            xyDiagram8.AxisX.Range.AlwaysShowZeroLevel = true;
-            xyDiagram8.AxisX.Range.ScrollingRange.SideMarginsEnabled = true;
-            xyDiagram8.AxisX.Range.SideMarginsEnabled = true;
-            xyDiagram8.AxisX.VisibleInPanesSerializable = "-1";
-            xyDiagram8.AxisY.Range.AlwaysShowZeroLevel = true;
-            xyDiagram8.AxisY.Range.ScrollingRange.SideMarginsEnabled = true;
-            xyDiagram8.AxisY.Range.SideMarginsEnabled = true;
-            xyDiagram8.AxisY.VisibleInPanesSerializable = "-1";
-            this.chartControl1.Diagram = xyDiagram8;
+            xyDiagram1.AxisX.Range.AlwaysShowZeroLevel = true;
+            xyDiagram1.AxisX.Range.ScrollingRange.SideMarginsEnabled = true;
+            xyDiagram1.AxisX.Range.SideMarginsEnabled = true;
+            xyDiagram1.AxisX.VisibleInPanesSerializable = "-1";
+            xyDiagram1.AxisY.Range.AlwaysShowZeroLevel = true;
+            xyDiagram1.AxisY.Range.ScrollingRange.SideMarginsEnabled = true;
+            xyDiagram1.AxisY.Range.SideMarginsEnabled = true;
+            xyDiagram1.AxisY.VisibleInPanesSerializable = "-1";
+            this.chartControl1.Diagram = xyDiagram1;
             this.chartControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.chartControl1.Location = new System.Drawing.Point(0, 0);
             this.chartControl1.Name = "chartControl1";
-            series15.Label = fullStackedBarSeriesLabel22;
-            series15.Name = "Ряд 1";
-            series15.View = fullStackedBarSeriesView22;
-            series16.Label = fullStackedBarSeriesLabel23;
-            series16.Name = "Ряд 2";
-            series16.View = fullStackedBarSeriesView23;
+            series1.Label = fullStackedBarSeriesLabel1;
+            series1.Name = "Ряд 1";
+            series1.View = fullStackedBarSeriesView1;
+            series2.Label = fullStackedBarSeriesLabel2;
+            series2.Name = "Ряд 2";
+            series2.View = fullStackedBarSeriesView2;
             this.chartControl1.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
-        series15,
-        series16};
-            this.chartControl1.SeriesTemplate.Label = fullStackedBarSeriesLabel24;
-            this.chartControl1.SeriesTemplate.View = fullStackedBarSeriesView24;
+        series1,
+        series2};
+            this.chartControl1.SeriesTemplate.Label = fullStackedBarSeriesLabel3;
+            this.chartControl1.SeriesTemplate.View = fullStackedBarSeriesView3;
             this.chartControl1.Size = new System.Drawing.Size(426, 88);
             this.chartControl1.TabIndex = 1;
             // 
@@ -877,7 +889,7 @@
             this.открытьToolStripMenuItem,
             this.информацияToolStripMenuItem});
             this.repobrowsermenu.Name = "repobrowsermenu";
-            this.repobrowsermenu.Size = new System.Drawing.Size(271, 114);
+            this.repobrowsermenu.Size = new System.Drawing.Size(271, 92);
             // 
             // toolStripMenuItem3
             // 
@@ -906,6 +918,13 @@
             this.информацияToolStripMenuItem.Text = "Информация";
             this.информацияToolStripMenuItem.Click += new System.EventHandler(this.информацияToolStripMenuItem_Click);
             // 
+            // отключитьToolStripMenuItem
+            // 
+            this.отключитьToolStripMenuItem.Name = "отключитьToolStripMenuItem";
+            this.отключитьToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.отключитьToolStripMenuItem.Text = "Отключить";
+            this.отключитьToolStripMenuItem.Click += new System.EventHandler(this.отключитьToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -926,6 +945,7 @@
             this.navBarControl1.ResumeLayout(false);
             this.navBarGroupControlContainer1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.checkedListBoxControl1)).EndInit();
+            this.con_client.ResumeLayout(false);
             this.navBarGroupControlContainer2.ResumeLayout(false);
             this.navBarGroupControlContainer2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).EndInit();
@@ -945,15 +965,15 @@
             this.splitContainer3.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).EndInit();
             this.splitContainer3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(xyDiagram8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(fullStackedBarSeriesLabel22)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(fullStackedBarSeriesView22)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(series15)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(fullStackedBarSeriesLabel23)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(fullStackedBarSeriesView23)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(series16)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(fullStackedBarSeriesLabel24)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(fullStackedBarSeriesView24)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(fullStackedBarSeriesLabel1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(fullStackedBarSeriesView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(series1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(fullStackedBarSeriesLabel2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(fullStackedBarSeriesView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(series2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(fullStackedBarSeriesLabel3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(fullStackedBarSeriesView3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).EndInit();
             this.settings.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
@@ -1056,6 +1076,8 @@
         private System.Windows.Forms.ToolStripMenuItem открытьДиректориюВПроводникеToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem открытьToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem информацияToolStripMenuItem;
+        private System.Windows.Forms.ContextMenuStrip con_client;
+        private System.Windows.Forms.ToolStripMenuItem отключитьToolStripMenuItem;
 
     }
 }

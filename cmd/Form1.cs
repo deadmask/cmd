@@ -405,7 +405,8 @@ namespace cmd
                     checkedListBoxControl1.Items.Clear();
                     foreach (var v in s.clients)
                     {
-                        checkedListBoxControl1.Items.Add(v);
+                         
+                        checkedListBoxControl1.Items.Add(  ((IPEndPoint)v.Client.RemoteEndPoint).Address.ToString()  );
                     }
 
                 }
@@ -448,6 +449,15 @@ namespace cmd
             { 
                 Process.Start(c.path_to_repo + "\\" + listView1.SelectedItems[0].Text); 
             }
+        }
+
+        private void отключитьToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            TcpClient tcpClient = (TcpClient)s.clients[0]; //    c       heckedListBoxControl1.SelectedItem;
+        //  s.clients
+            tcpClient.Close();
+
         }
 
 

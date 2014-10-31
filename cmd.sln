@@ -5,8 +5,6 @@ VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cmd", "cmd\cmd.csproj", "{8666538E-1518-4A62-A8F6-F68DE51E4C54}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TCPClient", "TCPClient\TCPClient\TCPClient.csproj", "{AE1B9E13-AB13-4032-8A9C-961E115A4C2F}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DXApplication1", "DXApplication1\DXApplication1\DXApplication1.csproj", "{754FFBA6-2610-4183-B9D6-3038FACB85C0}"
 EndProject
 Global
@@ -29,16 +27,6 @@ Global
 		{8666538E-1518-4A62-A8F6-F68DE51E4C54}.Release|Mixed Platforms.Build.0 = Release|x86
 		{8666538E-1518-4A62-A8F6-F68DE51E4C54}.Release|x86.ActiveCfg = Release|x86
 		{8666538E-1518-4A62-A8F6-F68DE51E4C54}.Release|x86.Build.0 = Release|x86
-		{AE1B9E13-AB13-4032-8A9C-961E115A4C2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AE1B9E13-AB13-4032-8A9C-961E115A4C2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AE1B9E13-AB13-4032-8A9C-961E115A4C2F}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
-		{AE1B9E13-AB13-4032-8A9C-961E115A4C2F}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
-		{AE1B9E13-AB13-4032-8A9C-961E115A4C2F}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{AE1B9E13-AB13-4032-8A9C-961E115A4C2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AE1B9E13-AB13-4032-8A9C-961E115A4C2F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{AE1B9E13-AB13-4032-8A9C-961E115A4C2F}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
-		{AE1B9E13-AB13-4032-8A9C-961E115A4C2F}.Release|Mixed Platforms.Build.0 = Release|Any CPU
-		{AE1B9E13-AB13-4032-8A9C-961E115A4C2F}.Release|x86.ActiveCfg = Release|Any CPU
 		{754FFBA6-2610-4183-B9D6-3038FACB85C0}.Debug|Any CPU.ActiveCfg = Debug|x86
 		{754FFBA6-2610-4183-B9D6-3038FACB85C0}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
 		{754FFBA6-2610-4183-B9D6-3038FACB85C0}.Debug|Mixed Platforms.Build.0 = Debug|x86

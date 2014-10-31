@@ -22,7 +22,7 @@ namespace cmd
         Thread listener;
         public bool runed;
 
-        public List<string> clients = new List<string>();
+        public List<TcpClient> clients = new List<TcpClient>();
 
      
 
@@ -59,7 +59,7 @@ namespace cmd
         }
 
 
-        void command(string s, object client, byte[] b)
+        void command(string s, object client)
         {
            string [] str = s.Split('|');
             try
@@ -69,9 +69,10 @@ namespace cmd
                 {
                     case "create repo":
                         {
-                            if (frm.create_repo(System.Environment.MachineName, 0))
+                          
+                            if (frm.create_repo(str[1].Replace("\0",""), 0))
                             {
-                                frm.log("Репозиторий создан успешно", frm.c.path_to_repo + "\\" + System.Environment.MachineName);
+                                frm.log("Репозиторий создан успешно", frm.c.path_to_repo + "\\" + str[1].Replace("\0", ""));
                                 frm.BeginInvoke((Action)(() =>
                                 {
                                     frm.memoEdit1.Text += "Репозиторий пользователя " + ((IPEndPoint)tcpClient.Client.RemoteEndPoint).Address.ToString() + "  создан успешно" + Environment.NewLine;
@@ -81,8 +82,8 @@ namespace cmd
                         }
                     case "send to repo":
                         {
-                            MessageBox.Show(str[0]);
-                            File.WriteAllBytes(@"C:\репо\HOME\Data\" + str[1], b );                           
+                          //  MessageBox.Show(str[0]);
+                          //  File.WriteAllBytes(@"C:\репо\HOME\Data\" + str[1]);
                             break;
                         }
                         
@@ -94,8 +95,8 @@ namespace cmd
         private void HandleClientComm(object client)
         {
             TcpClient tcpClient = (TcpClient)client;
-            string s = ((IPEndPoint)tcpClient.Client.RemoteEndPoint).Address.ToString();
-            clients.Add(s);
+          //  string s = ((IPEndPoint)tcpClient.Client.RemoteEndPoint).Address.ToString();
+            clients.Add(tcpClient);
             NetworkStream clientStream = tcpClient.GetStream();
             byte[] message = new byte[4096];
           
@@ -116,11 +117,11 @@ namespace cmd
                 {
                     break;
                 }                    
-            //   command(System.Text.ASCIIEncoding.Default.GetString(message2), client,message2);
+             command(System.Text.ASCIIEncoding.Default.GetString(message), client);
             }
             clientStream.Close();
             tcpClient.Close();
-            clients.Remove(s);
+            clients.Remove(tcpClient);
 
         }
 
