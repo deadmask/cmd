@@ -89,9 +89,12 @@ namespace cmd
                 }
                 XMLFile<List<string>> list = new XMLFile<List<string>>(c.path_to_repo + "\\lst");
                 repolist = list.Load();
-
+                if (!Directory.Exists("Temp")) 
+                {
+                    Directory.CreateDirectory("Temp");
+                }
          
-                    ;
+                    
             }
             catch (Exception) {    ; save_settings(); }
         }
@@ -113,6 +116,7 @@ namespace cmd
         
         private void xtraTabControl1_SelectedPageChanging(object sender, DevExpress.XtraTab.TabPageChangingEventArgs e)
         {
+            listView1.View = View.LargeIcon;
             if ((e.Page.Name == "settings") && (sw4.IsOn == true))
             {
                 passForm p = new passForm();
@@ -173,9 +177,8 @@ namespace cmd
 
         private void navBarItem1_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
-            if (create_repo(System.Environment.MachineName, 0))
-            {
-
+            if (create_repo(System.Environment.MachineName, 0, DateTime.Now))
+            {  
                 log("Репозиторий создан успешно", c.path_to_repo + "\\" + System.Environment.MachineName);
                 memoEdit1.Text +=  "Репозиторий создан успешно" + Environment.NewLine;
             }
@@ -218,7 +221,7 @@ namespace cmd
         }
 
 
-       public bool create_repo(string author,int fc)
+       public bool create_repo(string author, int fc, DateTime date_creation)
         {
             try
             {
@@ -282,7 +285,6 @@ namespace cmd
             label6.Text = r.author;
             label7.Text = r.date_creation.ToString();
             label8.Text = r.updated.ToString();
-            label9.Text = r.rev.ToString();
             label10.Text = r.filecount.ToString();
         }
 
@@ -333,8 +335,7 @@ namespace cmd
                 memoEdit1.Text += "----------------------------------REPO INFO----------------------------" + Environment.NewLine;
                 memoEdit1.Text += "Автор :" + r.author + Environment.NewLine;
                 memoEdit1.Text += "Дата создания :" + r.date_creation + Environment.NewLine;
-                memoEdit1.Text += "Количество файлов :" + r.filecount + Environment.NewLine;
-                memoEdit1.Text += "Ревизия :" + r.rev + Environment.NewLine;
+                memoEdit1.Text += "Количество файлов :" + r.filecount + Environment.NewLine;           
                 memoEdit1.Text += "Последнее обновление :" + r.updated + Environment.NewLine;
                 memoEdit1.Text += "Пользователи :" + Environment.NewLine;
                 foreach (var v in r.user_list)
@@ -348,8 +349,7 @@ namespace cmd
                 log("----------------------------------REPO INFO----------------------------", c.path_to_repo);
                 log("Автор :" + r.author, c.path_to_repo);
                 log("Дата создания :" + r.date_creation, c.path_to_repo);
-                log("Количество файлов :" + r.filecount, c.path_to_repo);
-                log("Ревизия :" + r.rev, c.path_to_repo);
+                log("Количество файлов :" + r.filecount, c.path_to_repo);  
                 log("Последнее обновление :" + r.updated, c.path_to_repo);
                 log("Пользователи :" + r.user_list, c.path_to_repo);
                 log("----------------------------------------------------------------------------", c.path_to_repo);
@@ -453,15 +453,49 @@ namespace cmd
 
         private void отключитьToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
-            TcpClient tcpClient = (TcpClient)s.clients[0]; //    c       heckedListBoxControl1.SelectedItem;
-        //  s.clients
+            TcpClient tcpClient = (TcpClient)s.clients[0]; 
             tcpClient.Close();
+        }
 
+        private void GetDirectories(DirectoryInfo[] subDirs,
+           TreeNode nodeToAddTo)
+        {
+            TreeNode aNode;
+            DirectoryInfo[] subSubDirs;
+            foreach (DirectoryInfo subDir in subDirs)
+            {
+                aNode = new TreeNode(subDir.Name, 0, 0);
+                aNode.Tag = subDir;
+                aNode.ImageKey = "folder";
+                subSubDirs = subDir.GetDirectories();
+                if (subSubDirs.Length != 0)
+                {
+                    GetDirectories(subSubDirs, aNode);
+                }
+                nodeToAddTo.Nodes.Add(aNode);
+            }
+        }
+
+        private void listView1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+          listView1.View = View.List;      
+            string path = c.path_to_repo + "\\"+listView1.SelectedItems[0].Text;;           
+            try
+            {
+                XMLFile<repo> file = new XMLFile<repo>(path + "\\info");
+                repo r = file.Load();
+                listView1.Items.Clear();
+
+                foreach (var v in r.file_info)
+                {
+                    listView1.Items.Add(v.FullName);  
+                }
+             }
+            
+            catch (Exception) { }
         }
 
 
       
-
     }
 }

@@ -45,6 +45,7 @@
             this.navBarGroupControlContainer1 = new DevExpress.XtraNavBar.NavBarGroupControlContainer();
             this.checkedListBoxControl1 = new DevExpress.XtraEditors.CheckedListBoxControl();
             this.con_client = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.отключитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.navBarGroupControlContainer2 = new DevExpress.XtraNavBar.NavBarGroupControlContainer();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
@@ -117,7 +118,6 @@
             this.открытьДиректориюВПроводникеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.открытьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.информацияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.отключитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -246,7 +246,14 @@
             this.con_client.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.отключитьToolStripMenuItem});
             this.con_client.Name = "con_client";
-            this.con_client.Size = new System.Drawing.Size(153, 48);
+            this.con_client.Size = new System.Drawing.Size(137, 26);
+            // 
+            // отключитьToolStripMenuItem
+            // 
+            this.отключитьToolStripMenuItem.Name = "отключитьToolStripMenuItem";
+            this.отключитьToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
+            this.отключитьToolStripMenuItem.Text = "Отключить";
+            this.отключитьToolStripMenuItem.Click += new System.EventHandler(this.отключитьToolStripMenuItem_Click);
             // 
             // navBarGroupControlContainer2
             // 
@@ -470,6 +477,7 @@
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.ItemSelectionChanged += new System.Windows.Forms.ListViewItemSelectionChangedEventHandler(this.listView1_ItemSelectionChanged);
+            this.listView1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.listView1_MouseDoubleClick);
             this.listView1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.listView1_MouseDown);
             // 
             // imageList1
@@ -917,13 +925,6 @@
             this.информацияToolStripMenuItem.Size = new System.Drawing.Size(270, 22);
             this.информацияToolStripMenuItem.Text = "Информация";
             this.информацияToolStripMenuItem.Click += new System.EventHandler(this.информацияToolStripMenuItem_Click);
-            // 
-            // отключитьToolStripMenuItem
-            // 
-            this.отключитьToolStripMenuItem.Name = "отключитьToolStripMenuItem";
-            this.отключитьToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.отключитьToolStripMenuItem.Text = "Отключить";
-            this.отключитьToolStripMenuItem.Click += new System.EventHandler(this.отключитьToolStripMenuItem_Click);
             // 
             // Form1
             // 

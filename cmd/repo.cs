@@ -11,7 +11,6 @@ namespace cmd
     {
         public string name { set; get; }
         public string author { set; get; }
-        public int rev { set; get; }
         public DateTime date_creation { set; get; }
         public DateTime updated { set; get; }
         public int filecount { set; get; }
@@ -23,13 +22,10 @@ namespace cmd
     public class file
     {  
         public string crc { set; get; }
-        public string Attributes { set; get; }
-        public string CreationTime { set; get; }
+        public FileAttributes Attributes { set; get; }
         public string Extension { set; get; }
         public string FullName { set; get; }
-        public string LastAccessTime { set; get; }
-        public string LastWriteTime { set; get; }
-        public string Length { set; get; }
+        public long Length { set; get; }
         public string Name { set; get; }     
     }
      public class users
